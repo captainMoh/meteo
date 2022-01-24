@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="style.css">
+    
+    <title>Météo</title>
+</head>
+<body>
+    <div id="contain">
+
+        <div id="entete">
+            <h1>Application météo</h1>
+                <form action="">
+                    <input type="text" id="champ" placeholder="Entrez une ville"/>
+                    <button type="button" onclick="afficher()">Valider</button>
+                </form>
+        </div>
+
+        <div class="tout">
+            <img id="loader" class="hidden" src="./ressources/chargement/bars.svg">
+            <div id="outer" class="hidden"></div>
+
+            <div id="donnees">
+                <div id="logo_temperature">
+                     <div id="logo">
+                         <img id="image" src="./ressources/jour/01d.svg" alt="logo météo">
+                     </div>
+         
+                     <div id="temperature">
+                         <p id="cloud"></p>
+                         <p id="temp"></p>
+                     </div>
+                </div>
+     
+                <div id="infos">
+                     <div class="part1">
+                         <p class="ressenti"></p>
+                         <p class="humidite"></p>
+                     </div>
+                     <div class="part2">
+                         <p class="vent"></p>
+                         <p class="lieu"></p>
+                     </div>
+                </div>
+             </div>
+     
+             <div id="previsions">
+                 <div class="hourly">
+                     <div class="hour">
+                         <p class="hour-name"></p>
+                         <p class="hour-prevision"></p>
+                     </div>
+     
+                     <div class="hour">
+                         <p class="hour-name"></p>
+                         <p class="hour-prevision"></p>
+                     </div>
+     
+                     <div class="hour">
+                         <p class="hour-name"></p>
+                         <p class="hour-prevision"></p>
+                     </div>
+     
+                     <div class="hour">
+                         <p class="hour-name"></p>
+                         <p class="hour-prevision"></p>
+                     </div>
+     
+                     <div class="hour">
+                         <p class="hour-name"></p>
+                         <p class="hour-prevision"></p>
+                     </div>
+     
+                     <div class="hour">
+                         <p class="hour-name"></p>
+                         <p class="hour-prevision"></p>
+                     </div>
+     
+                     <div class="hour">
+                         <p class="hour-name"></p>
+                         <p class="hour-prevision"></p>
+                     </div>
+                 </div>
+     
+                 <div class="daily">
+                     <div class="day">
+                         <p class="day-name"></p>
+                         <p class="day-prevision"></p>
+                     </div>
+     
+                     <div class="day">
+                         <p class="day-name"></p>
+                         <p class="day-prevision"></p>
+                     </div>
+     
+                     <div class="day">
+                         <p class="day-name"></p>
+                         <p class="day-prevision"></p>
+                     </div>
+     
+                     <div class="day">
+                         <p class="day-name"></p>
+                         <p class="day-prevision"></p>
+                     </div>
+     
+                     <div class="day">
+                         <p class="day-name"></p>
+                         <p class="day-prevision"></p>
+                     </div>
+     
+                     <div class="day">
+                         <p class="day-name"></p>
+                         <p class="day-prevision"></p>
+                     </div>
+     
+                     <div class="day">
+                         <p class="day-name"></p>
+                         <p class="day-prevision"></p>
+                 </div>
+             </div>
+        </div>
+        
+    </div>
+    
+
+    <script type="text/javascript" src="script.js"></script>
+</body>
+</html>

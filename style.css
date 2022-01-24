@@ -1,0 +1,200 @@
+*, ::after, ::before{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background: linear-gradient(45deg, rgb(59,50,50), rgb(22,28,29));
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    height: 100vh;
+    width: 100vw;
+    color: #f1f1f1;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+#contain{
+    width: 100vw;
+    height: 99vh;
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(45deg, #0c1cfe, #b507e0);
+    border: 1px solid #f1f1f1;
+}
+
+#entete{
+    display: flex;
+    height: 25%;
+    width: 100%;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    border: 1px solid #f1f1f1;
+}
+
+#champ{
+    height: 30px;
+    width: auto;
+}
+
+button{
+    border-radius: 50px;
+    height: 30px;
+    width: 100px;
+    border: none;
+}
+
+#donnees{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 75%;
+    width: 100%;
+    font-size: 20px;
+}
+
+.tout {
+    position: relative;
+    height: 75%;
+}
+
+#loader {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+}
+
+#outer {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: .5;
+    z-index: 2;
+}
+
+.hidden {
+    animation: disparition 1s forwards;
+}
+
+#logo_temperature {
+    width: 66%;
+    height: 100%;
+    display: flex;
+}
+
+#temperature{
+    text-transform: capitalize;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: xx-large;
+}
+
+#temp {
+    font-weight: bolder;
+}
+
+#infos{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    width: 34%;
+    height: 100%;
+    font-size: 30px;
+}
+
+#logo{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* taille du logo svg */
+#image {
+    width: 100%;
+    height: auto;
+}
+
+#previsions{
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    height: 25%;
+    width: 100%;
+}
+
+.hourly, .daily {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+}
+
+.hour, .day {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #f1f1f1;
+}
+
+.hour-name, .day-name {
+    font-weight: bolder;
+}
+
+.hourly:first-child, .daily:first-child, .hourly:last-child, .daily:last-child {
+    border-left: none;
+    border-right: none;
+} 
+
+.day {
+    border-top: none;
+    border-bottom: none;
+    text-transform: capitalize;
+}
+
+@media screen and (max-width: 600px) {
+
+    #contain{
+        width: 100vw;
+        height: 90vh;
+        margin: 30px auto;
+    }
+    
+    #donnees{
+        flex-direction: column;
+    }
+
+    #logo_temperature {
+        width: 100%;
+    }
+
+    #infos {
+        width: 100%;
+        flex-direction: row;
+        font-size: 20px;
+    }
+    
+    #temperature{
+        font-size: 30px;
+    }
+}
+
+@keyframes disparition {
+    100% {
+        opacity: 0;
+        display: none;
+    }
+}
+
+
+
+
+

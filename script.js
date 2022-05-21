@@ -60,7 +60,7 @@ const localisation = async () => {
                     i+=3
                 })
 
-                if(h > 6 && h < 18) image.setAttribute('src', `./ressources/jour/${data.current.weather[0].icon}.svg`)
+                if(h > new Date(data.current.sunrise*1000).getHours() && h < new Date(data.current.sunset*1000).getHours()) image.setAttribute('src', `./ressources/jour/${data.current.weather[0].icon}.svg`)
                 else {
                     image.setAttribute('src', `./ressources/nuit/${data.current.weather[0].icon}.svg`)
                 }
@@ -136,7 +136,7 @@ const afficher = async () => {
         i+=3
     })
 
-    if(h > 6 && h < 18) image.setAttribute('src', `./ressources/jour/${resultatApi.current.weather[0].icon}.svg`)
+    if(h > new Date(resultatApi.current.sunrise*1000).getHours() && h < new Date(resultatApi.current.sunset*1000).getHours()) image.setAttribute('src', `./ressources/jour/${resultatApi.current.weather[0].icon}.svg`)
     else {
         image.setAttribute('src', `./ressources/nuit/${resultatApi.current.weather[0].icon}.svg`)
     }
